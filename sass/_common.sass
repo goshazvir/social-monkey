@@ -65,6 +65,7 @@ h1
 	margin-bottom: 10px
 	font-size: 21px
 	color: #615f5d
+	+clr
 	& > label
 		+clr
 	.row__descr
@@ -117,8 +118,6 @@ h1
 		white-space: nowrap
 	em
 		font-style: normal
-		width: 100%
-		display: block
 	i
 		content: ""
 		position: absolute
@@ -149,6 +148,8 @@ h1
 		&:hover
 			background: #eff0f0
 			cursor: pointer
+		&:last-child
+			+border-radius(0 0 5px 5px)
 		span
 			padding: 0
 			
