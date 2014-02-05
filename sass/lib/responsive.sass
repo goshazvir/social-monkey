@@ -2,7 +2,7 @@ $step1: 979px
 $step2: 767px
 $step3: 690px
 $step4: 600px
-
+$step5: 420px
 @mixin r($media:'step1')
 	@if $media == step1
 		@media only screen and (max-width: $step1)
@@ -17,4 +17,7 @@ $step4: 600px
 			@content
 	@else if $media == step4
 		@media only screen and (max-width: $step4)
+			@content
+	@else if $media == step5
+		@media only screen and (max-width: $step5)
 			@content

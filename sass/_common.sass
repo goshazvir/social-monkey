@@ -18,7 +18,7 @@ body
 		width: 90%
 		margin: 0 5% 
 .out
-	min-width: 600px
+	// min-width: 600px
 	position: relative
 h1
 	margin-bottom: 5px
@@ -44,14 +44,33 @@ h1
 	color: #fff 
 	text-decoration: none
 	background: #c84040 
-	+g(#d7454f, #a32f37)
+	+g(#ad3434, #de494a)
 	+border-radius(3px)
 	&:hover
 		background: #D43B3B 
-		+g(#a32f37, #d7454f)
+		+g(#de494a, #ad3434)
 	&:active
 		position: relative
 		top: 1px
+.btn-black
+	height: 23px
+	line-height: 23px
+	padding: 0 13px
+	border: 1px solid #0c0b0b
+	background: #212020
+	+g(#2d2b2b, #141313)
+	text-decoration: none
+	font-size: 20px
+	color: #CDCACA 
+	+border-radius(3px)
+	&:hover
+		background: #212020 
+		+g(#141313, #2d2b2b)
+	&:active
+		position: relative
+		top: 1px
+
+
 .fb
 	display: inline-block
 	+transition(all 0.2s ease-in)
@@ -59,6 +78,9 @@ h1
 	&:hover
 		+transition(all 0.2s ease-in)
 		+opacity(0.8)
+	&:active
+		position: relative
+		top: 1px
 /*------------------------- elemets form -------------------------*/
 // row
 .row
@@ -73,6 +95,8 @@ h1
 		margin-left: 7px
 		float: right
 		text-align: left
+		+r(step5)
+			font-size: 16px
 	.select 
 		float: right
 .row_btn
@@ -80,6 +104,8 @@ h1
 	text-align: center
 	.btn-red
 		padding: 0 16px
+		+r(step5)
+			font-size: 26px
 // input
 .input
 	width: 200px
@@ -94,6 +120,8 @@ h1
 	+placeholder
 		font-size: 18px
 		color: #615f5d
+	+r(step5)
+		width: 150px
 // select
 .select
 	width: 220px
@@ -108,12 +136,15 @@ h1
 	+border-radius(5px)
 	+box
 	+sel
+	+r(step5)
+		width: 170px
 	span
 		height: 24px
+		line-height: 22px
 		padding: 0 33px 
 		display: block
 		overflow: hidden
-		line-height: 1.2
+		font-size: 17px
 		text-overflow: ellipsis
 		white-space: nowrap
 	em
@@ -140,14 +171,27 @@ h1
 		background-color: #feffff
 		+g(#e7e9ea, #e7e9ea)
 		+border-radius(0 0 5px 5px)
-		@include box-shadow(-1px 1px 0 rgba(255,255,255,.09), inset -1px 1px 3px rgba(0,0,0,.36), inset 0 0 0 1px rgba(0,0,0,.03))
+		@include box-shadow(-1px 1px 0 rgba(255,255,255,.09), inset -1px 1px 2px rgba(0,0,0,.16), inset 0 0 0 1px rgba(0,0,0,.03))
 	ul
 		margin: 0
 	li
+		line-height: 22px
 		padding: 0 10px
+		font-size: 17px
+		position: relative
 		&:hover
 			background: #eff0f0
+			@include box-shadow(-1px 1px 0 rgba(255,255,255,.09), inset -1px 1px 1px rgba(0,0,0,.16), inset 0 0 0 1px rgba(0,0,0,.03))
 			cursor: pointer
+			&:after
+				content: ""
+				height: 3px
+				position: absolute
+				top: -1px
+				left: 0px
+				right: 1px
+				z-index: 999
+				background: #eff0f0 
 		&:last-child
 			+border-radius(0 0 5px 5px)
 		span
@@ -178,6 +222,9 @@ $rad-checked_bg: #feffff
 		line-height: 1
 		vertical-align: top
 		color: #615f5d
+		+r(step5)
+			margin-top: 5px
+			font-size: 16px
 		&:before
 			content: ""
 			position: absolute
@@ -249,6 +296,8 @@ $rad-checked_bg: #feffff
 		+r(step1)
 			display: block
 	.btn-red
+		height: 32px
+		line-height: 28px
 		font-weight: bold
 .points
 	margin-left: -14px
@@ -343,6 +392,13 @@ $rad-checked_bg: #feffff
 	+opacity(0)
 	+transition(all 0.3s ease-in)
 	+cover
+	+r(step4)
+		width: 396px
+		margin-left: -198px
+	+r(step5)
+		width: 92%
+		margin: 0 4%
+		left: 0
 	&.is-active
 		z-index: 1001
 		+opacity(1)
@@ -352,6 +408,9 @@ $rad-checked_bg: #feffff
 		right: -28px
 		cursor: pointer
 		+s(i-close)
+		+r(step4)
+			top: -33px
+			right: 0px
 .popup__meta
 	margin-bottom: 25px
 	font-size: 30px
@@ -359,10 +418,16 @@ $rad-checked_bg: #feffff
 	color: #615F5D
 // popup_reg
 .popup_reg
-	min-height: 458px
 	background: url(../img/icons/popup.png) 0px 0px no-repeat
+	+border-radius(12px)
 	.popup-i
 		padding: 199px 75px 10px 170px
+		+r(step4)
+			padding: 35px 20px
+	.popup__meta
+		margin-right: 15px
+	+r(step4)
+		background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat
 .popup__wrap
 	+clr
 .popup__user
@@ -377,26 +442,70 @@ $rad-checked_bg: #feffff
 .popup__facebook
 	padding-top: 20px
 	overflow: hidden
+	display: inline-block
+	text-align: center
 	font-size: 30px
 	color: #615F5D
 	line-height: 1
 // popup_form
 .popup_form
-	min-height: 523px
 	background: url(../img/icons/popup2.png) 0px 0px no-repeat
+	+border-radius(12px)
+	+r(step4)
+		background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat
 	.popup-i
 		padding: 153px 25px 10px 170px
+		+r(step4)
+			padding: 35px 20px
 	.popup__meta
 		margin-bottom: 10px
 		margin-right: 65px
+		+r(step5)
+			font-size: 18px
 // popup_toda
 .popup_toda
-	min-height: 458px
 	background: url(../img/icons/popup.png) 0px 0px no-repeat
+	+border-radius(12px)
 	font-size: 30px
 	color: #615f5d
+	+r(step4)
+		font-size: 26px
+		background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat
+	+r(step4)
+		font-size: 21px
 	.popup-i
 		padding: 199px 75px 10px 170px
 		text-align: center
+		+r(step4)
+			padding: 35px 20px
 	.h3
 		font-weight: bold
+// popup_counter
+.popup_counter
+	background: url(../img/icons/popup.png) 0px 0px no-repeat
+	+border-radius(12px)
+	+r(step4)
+		background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat
+	.popup-i
+		padding: 183px 60px 10px 147px
+		font-size: 18px
+		color: #615f5d
+		text-align: center
+		+r(step4)
+			padding: 35px 20px
+// counter
+.counter
+	margin-top: 18px
+.counter__meta
+	margin-bottom: 10px
+.counter__time
+	margin-bottom: 22px
+// more-present
+.more-present
+	padding-bottom: 1px
+	overflow: hidden
+	.btn-black
+		float: right
+		margin-right: 7px
+		
+
