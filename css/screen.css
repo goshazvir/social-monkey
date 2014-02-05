@@ -154,7 +154,7 @@ h1 a:hover { text-decoration: underline; }
 
 .popup__meta { margin-bottom: 25px; font-size: 30px; font-weight: normal; color: #615f5d; }
 
-.popup_reg { background: url(../img/icons/popup.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
+.popup_reg { min-height: 458px; background: url(../img/icons/popup.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
 .popup_reg .popup-i { padding: 199px 75px 10px 170px; }
 @media only screen and (max-width: 600px) { .popup_reg .popup-i { padding: 35px 20px; } }
 .popup_reg .popup__meta { margin-right: 15px; }
@@ -169,21 +169,21 @@ h1 a:hover { text-decoration: underline; }
 
 .popup__facebook { padding-top: 20px; overflow: hidden; display: inline-block; text-align: center; font-size: 30px; color: #615f5d; line-height: 1; }
 
-.popup_form { background: url(../img/icons/popup2.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
+.popup_form { min-height: 523px; background: url(../img/icons/popup2.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
 @media only screen and (max-width: 600px) { .popup_form { background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat; } }
 .popup_form .popup-i { padding: 153px 25px 10px 170px; }
 @media only screen and (max-width: 600px) { .popup_form .popup-i { padding: 35px 20px; } }
 .popup_form .popup__meta { margin-bottom: 10px; margin-right: 65px; }
 @media only screen and (max-width: 420px) { .popup_form .popup__meta { font-size: 18px; } }
 
-.popup_toda { background: url(../img/icons/popup.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; font-size: 30px; color: #615f5d; }
+.popup_toda { min-height: 458px; background: url(../img/icons/popup.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; font-size: 30px; color: #615f5d; }
 @media only screen and (max-width: 600px) { .popup_toda { font-size: 26px; background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat; } }
 @media only screen and (max-width: 600px) { .popup_toda { font-size: 21px; } }
 .popup_toda .popup-i { padding: 199px 75px 10px 170px; text-align: center; }
 @media only screen and (max-width: 600px) { .popup_toda .popup-i { padding: 35px 20px; } }
 .popup_toda .h3 { font-weight: bold; }
 
-.popup_counter { min-height: 523px; background: url(../img/icons/popup.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
+.popup_counter { min-height: 458px; background: url(../img/icons/popup.png) 0px 0px no-repeat; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
 @media only screen and (max-width: 600px) { .popup_counter { background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat; } }
 .popup_counter .popup-i { padding: 183px 60px 10px 147px; font-size: 18px; color: #615f5d; text-align: center; }
 @media only screen and (max-width: 600px) { .popup_counter .popup-i { padding: 35px 20px; } }
