@@ -1,0 +1,20 @@
+$step1: 979px
+$step2: 767px
+$step3: 690px
+$step4: 600px
+
+@mixin r($media:'step1')
+	@if $media == step1
+		@media only screen and (max-width: $step1)
+			@content
+
+	@else if $media == step2
+		@media only screen and (max-width: $step2)
+			@content
+
+	@else if $media == step3
+		@media only screen and (max-width: $step3)
+			@content
+	@else if $media == step4
+		@media only screen and (max-width: $step4)
+			@content
