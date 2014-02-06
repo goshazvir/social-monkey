@@ -26,6 +26,8 @@ h1
 	font-size: 24px
 	text-align: center
 	color: #294358
+	+r(step4)
+		font-size: 18px
 	a
 		font-weight: normal
 		font-size: 24px
@@ -34,6 +36,8 @@ h1
 		color: #294358
 		&:hover
 			text-decoration: underline
+		+r(step4)
+			font-size: 18px
 /*------------------------- btn -------------------------*/
 .btn-red
 	padding: 0 13px
@@ -308,12 +312,20 @@ $rad-checked_bg: #feffff
 	display: inline-block
 	+r(step2)
 		font-size: 18px
+	+r(step6)
+		margin-top: 0
+		display: block
+		margin-left: 0
 	.points__bold
 		font-weight: bold
 		strong
 			font-size: 34px
 			+r(step2)
 				font-size: 28px
+	.points__divider
+		font-style: normal
+		+r(step6)
+			display: none
 .logo
 	vertical-align: middle
 	display: inline-block
@@ -325,6 +337,8 @@ $rad-checked_bg: #feffff
 	background: url(../img/bg.jpg) 0px 0px no-repeat
 	overflow: hidden
 	+cover
+	+r(step4)
+		background: #1c4a6b 
 .product
 	width: 32%
 	height: 285px
@@ -348,6 +362,7 @@ $rad-checked_bg: #feffff
 	+r(step4)
 		width: 100%
 		margin-right: 0
+		margin-bottom: 15px
 .product__media
 	height: 170px
 	margin-bottom: 10px
@@ -427,6 +442,10 @@ $rad-checked_bg: #feffff
 			padding: 35px 20px
 	.popup__meta
 		margin-right: 15px
+		+r(step4)
+			font-size: 26px
+			text-align: center
+			margin-right: 0
 	+r(step4)
 		background: url(../img/icons/popup-mobile.png) 0px 0px no-repeat
 .popup__wrap
@@ -504,12 +523,45 @@ $rad-checked_bg: #feffff
 	margin-bottom: 10px
 .counter__time
 	margin-bottom: 22px
+	text-align: center
+	font-size: 0
+	.counter__time-label
+		width: 46px
+		margin-right: 16px
+		display: inline-block
+		color: #E34B4C
+		line-height: 1
+		position: relative
+		&:first-child
+			&:before
+				content: none
+		&:before
+			content: ":"
+			position: absolute
+			top: 2px
+			right: -10px
+			font-size: 30px
+			font-family: Arial, sans-serif
+	.counter__time-num
+		font-size: 40px
+		font-family: Arial, sans-serif
+		text-transform: uppercase
+	.counter__time-desc
+		font-size: 12px
+		font-weight: bold
 // more-present
 .more-present
 	padding-bottom: 1px
 	overflow: hidden
+	text-align: center
+	span
+		+r(step4)
+			display: inline-block
 	.btn-black
 		float: right
 		margin-right: 7px
+		+r(step4)
+			float: none
+			display: inline-block
 		
 
